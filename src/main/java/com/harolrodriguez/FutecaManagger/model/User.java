@@ -30,7 +30,6 @@ public class User {
     @NotBlank
     @Column(unique = true)
     private String email;
-    @Email
     @NotBlank
     private String password;
     private String profilePicture;

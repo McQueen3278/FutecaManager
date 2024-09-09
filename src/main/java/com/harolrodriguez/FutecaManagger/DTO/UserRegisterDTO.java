@@ -15,7 +15,6 @@ public class UserRegisterDTO {
     @Email
     @NotBlank(message = "El correo no puede ir vacio")
     private String email;
-    @Email
     @NotBlank(message = "La password no puede ir vacia")
     private String password;
 }

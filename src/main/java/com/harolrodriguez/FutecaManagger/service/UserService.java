@@ -40,12 +40,12 @@ public class UserService implements IUserService{
     public boolean login(String username, String password){
         User user = userRepository.findByUsername(username);
 
-        if (user == null || bCryptSecurity.checkPassword(password, user.getPassword()) ){
-            return true;
+        if (user == null || !bCryptSecurity.checkPassword(password, user.getPassword()) ){
+            return false;
         }
         // mas logica
         //validar que exista el usuario con ese nombre
         //validar que ese usuario traiga la contraseña que envio el usuario
-        return false;
+        return true;
     }
 }
